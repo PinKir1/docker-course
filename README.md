@@ -1,96 +1,78 @@
 <h1>Docker course</h1>
 
-Running the Docker welcome container. The command `docker run -d -p 8080:80 docker/welcome-to-docker` downloads and starts the container. The terminal shows the download progress and successful completion of each layer.
-<p align="center">
-  <img src="Screenshots/ (1).png" alt="(1)"/>
-</p>
+Running the welcome-to-docker container with port mapping using `docker run -d -p 8080:80 docker/welcome-to-docker` command. The output shows the download process of container layers.
 
-Success screen showing that you've successfully run your first Docker container. The page displays a congratulatory message with social media sharing options (X, LinkedIn, and Reddit) against a blue background with festive confetti.
-<p align="center">
-  <img src="Screenshots/ (2).png" alt="(2)"/>
-</p>
+<p align="center"> <img src="Screenshots/ (1).png" alt="(1)"/> </p>
 
-Container file system view in Docker Desktop. The terminal shows the result of `ls -la` command, displaying various system directories and files within the container, including configuration files and system folders with their permissions and ownership.
-<p align="center">
-  <img src="Screenshots/ (3).png" alt="(3)"/>
-</p>
+Successfully running the first Docker container, which displays a congratulatory message with social media sharing options. This confirms the container is working correctly.
 
-Container inspection view showing configuration details. The JSON output displays various container settings, including environment variables, NGINX version, and container commands. The interface shows multiple tabs for different aspects of container management.
-<p align="center">
-  <img src="Screenshots/ (4).png" alt="(4)"/>
-</p>
+<p align="center"> <img src="Screenshots/ (2).png" alt="(2)"/> </p>
 
-Cloning the Docker getting-started-todo-app repository from GitHub. The terminal shows the cloning process with statistics about objects, compression, and successful navigation to the project directory using `cd` command.
-<p align="center">
-  <img src="Screenshots/ (5).png" alt="(5)"/>
-</p>
+Examining the container's file system using the Docker Desktop interface. The `ls -la` command shows the root directory structure with various system files and directories.
 
-Running Docker Compose with watch mode. The terminal output shows the build process and various stages of container setup, including loading Dockerfiles, transferring contexts, and installing dependencies.
-<p align="center">
- <img src="Screenshots/ (6).png" alt="(6)"/>
-</p>
+<p align="center"> <img src="Screenshots/ (3).png" alt="(3)"/> </p>
 
-Docker Compose successfully created and started all required containers for the todo application, including the client, backend, MySQL database, phpMyAdmin, and proxy containers. Each container's status is shown as "Started".
-<p align="center">
- <img src="Screenshots/ (7).png" alt="(7)"/>
-</p>
+Inspecting container settings in Docker Desktop, showing detailed configuration including environment variables, ports, and runtime settings in JSON format.
 
-The todo application's initial interface showing a "Hello world!" heading, an input field for new items, and a message indicating no items have been added yet.
-<p align="center">
- <img src="Screenshots/ (8).png" alt="(8)"/>
-</p>
+<p align="center"> <img src="Screenshots/ (4).png" alt="(4)"/> </p>
 
-The backend source code showing a JavaScript file (getGreeting.js) that contains an array of nautical-themed greeting messages and an async function to randomly select and return one of these greetings.
-<p align="center">
- <img src="Screenshots/ (9).png" alt="(9)"/>
-</p>
+Cloning the Docker getting-started-todo-app repository and navigating into the project directory. The command shows the download progress of repository objects.
 
-The todo application interface displaying one of the random greeting messages: "All hands on deck!" along with the new item input field and empty list message.
-<p align="center">
- <img src="Screenshots/ (10).png" alt="(10)"/>
-</p>
+<p align="center"> <img src="Screenshots/ (5).png" alt="(5)"/> </p>
 
-Another random greeting "Charting the course ahead!" displayed on the todo application interface with the empty list and input field for adding new items.
-<p align="center">
- <img src="Screenshots/ (11).png" alt="(11)"/>
-</p>
+Using `docker compose watch` command to build and start the todo application. The output shows detailed build process and copying of files for both backend and client services.
 
-The interface showing a different nautical greeting "Whalecome!" demonstrating the random greeting functionality of the application.
-<p align="center">
- <img src="Screenshots/ (12).png" alt="(12)"/>
-</p>
+<p align="center"> <img src="Screenshots/ (6).png" alt="(6)"/> </p>
 
-Part of the React component code (AddNewItemForm.jsx) showing the form structure with input field configuration, including placeholder text and accessibility labels.
-<p align="center">
- <img src="Screenshots/ (13).png" alt="(13)"/>
-</p>
+Successful startup of Docker Compose services showing the creation of network, volume, and multiple containers including client, backend, MySQL, proxy, and phpMyAdmin services.
 
-The todo application interface with the input field now showing the placeholder text "What do you need to do?" along with the "Whalecome!" greeting.
-<p align="center">
- <img src="Screenshots/ (14).png" alt="(14)"/>
-</p>
+<p align="center"> <img src="Screenshots/ (7).png" alt="(7)"/> </p>
 
-The application's SCSS styling file (index.scss) showing basic style configurations including Bootstrap import, background color, margin settings, and font family definition.
-<p align="center">
- <img src="Screenshots/ (15).png" alt="(15)"/>
-</p>
+The todo application's initial interface displaying "Hello world!" header with an empty item list and an "Add Item" button, showing the successfully running frontend.
 
-The todo application interface with updated styling showing a light blue background color, while maintaining the "Whalecome!" greeting and input field.
-<p align="center">
- <img src="Screenshots/ (16).png" alt="(16)"/>
-</p>
+<p align="center"> <img src="Screenshots/ (8).png" alt="(8)"/> </p>
 
-Docker Hub interface showing the repository creation page where a new repository named "getting-started-todo-app" is being set up under the "kirilkiryak" namespace with public visibility settings.
-<p align="center">
- <img src="Screenshots/ (17).png" alt="(17)"/>
-</p>
+Examining the backend route file `getGreeting.js`, which contains an array of nautical-themed greetings and logic to randomly select and send one as a response.
 
-Terminal output showing the Docker build process with tag "kirilkiryak/getting-started-todo-app". The build includes steps for installing dependencies, running tests, and building both client and backend components.
-<p align="center">
- <img src="Screenshots/ (18).png" alt="(18)"/>
-</p>
+<p align="center"> <img src="Screenshots/ (9).png" alt="(9)"/> </p>
 
-Terminal showing the list of Docker images and the successful push of the application image to Docker Hub. The output includes image sizes and creation timestamps, followed by multiple "Pushed" confirmations for various layers.
-<p align="center">
- <img src="Screenshots/ (19).png" alt="(19)"/>
-</p>
+Updated todo application interface showing the randomly selected greeting "All hands on deck!" demonstrating the successful integration between frontend and backend services.
+
+<p align="center"> <img src="Screenshots/ (10).png" alt="(10)"/> </p>
+
+The todo application showing "Charting the course ahead!" greeting, displaying the empty state with input field and Add Item button.
+
+<p align="center"> <img src="Screenshots/ (11).png" alt="(11)"/> </p>
+
+The interface refreshed with a new random greeting "Whalecome!", demonstrating the dynamic greeting functionality from the backend service.
+
+<p align="center"> <img src="Screenshots/ (12).png" alt="(12)"/> </p>
+
+Examining the AddNewItemForm component code in `AddNewItemForm.jsx`, showing the form structure with input field configuration and event handlers.
+
+<p align="center"> <img src="Screenshots/ (13).png" alt="(13)"/> </p>
+
+Todo app interface with input field placeholder text "What do you need to do?" visible, showing the form's interactive elements.
+
+<p align="center"> <img src="Screenshots/ (14).png" alt="(14)"/> </p>
+
+Viewing the application's styling in `index.scss`, showing basic style configurations including Bootstrap import, background color, margin, and font family settings.
+
+<p align="center"> <img src="Screenshots/ (15).png" alt="(15)"/> </p>
+
+
+The todo application interface with light blue background, showing the "Whalecome!" greeting and empty item list interface.
+
+<p align="center"> <img src="Screenshots/ (16).png" alt="(16)"/> </p>
+
+Creating a new repository on Docker Hub for the todo application, with namespace 'kirilkiryak' and repository name 'getting-started-todo-app' set to public visibility.
+
+<p align="center"> <img src="Screenshots/ (17).png" alt="(17)"/> </p>
+
+Building the Docker image using `docker build` command with tag 'kirilkiryak/getting-started-todo-app', showing the build process and layers caching.
+
+<p align="center"> <img src="Screenshots/ (18).png" alt="(18)"/> </p>
+
+Using `docker image ls` to list local images and `docker push` to upload the todo application image to Docker Hub, showing successful push of multiple layers.
+
+<p align="center"> <img src="Screenshots/ (19).png" alt="(19)"/> </p>
